@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Ayudar</title>
+    <link rel="icon" type="image/x-icon" href="../img/icono-pagina.ico">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+    }
+
+    body {
+        background-color: #F7F4EA;
+    }
+
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    nav ul {
+        background-color: #A8BBA3;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        height: 50px;
+        gap: 5px;
+        justify-content: right;
+        align-items: center;
+        position: relative;
+        padding-right: 10px;
+    }
+
+    nav img {
+        position: absolute;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 45px;
+    }
+
+    nav a {
+        background-color: antiquewhite;
+        padding: 10px 40px;
+        text-decoration: none;
+        color: black;
+        border-radius: 5px;
+    }
+
+    nav a:hover {
+        background-color: #f1af59;
+    }
+
+    .donar a {
+        background-color: #b3ff00;
+        font-weight: bold;
+    }
+
+
+    .intro-ayuda {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .intro-ayuda h1 {
+        font-size: 50px;
+        color: #b65200;
+        margin-bottom: 20px;
+    }
+
+    .intro-ayuda p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+
+    .bloques-ayuda {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 60px 10%;
+    }
+
+    .bloque {
+        width: 30%;
+        background-color: #F7F4EA;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .bloque img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .bloque h2 {
+        color: #b65200;
+        margin-bottom: 15px;
+        font-size: 28px;
+    }
+
+    .bloque p {
+        margin-bottom: 20px;
+    }
+
+    .bloque a {
+        background-color: #b65200;
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .bloque a:hover {
+        background-color: #f1af59;
+        color: black;
+    }
+
+    .donaciones {
+        background-color: #A8BBA3;
+        padding: 80px 10%;
+        text-align: center;
+        color: white;
+    }
+
+    .donaciones h2 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .donaciones p {
+        max-width: 900px;
+        margin: auto;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .donaciones ul {
+        list-style: none;
+        margin-top: 20px;
+    }
+
+    .donaciones li {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+
+    .donaciones a {
+        display: inline-block;
+        margin-top: 20px;
+        background-color: #b65200;
+        color: white;
+        padding: 15px 40px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .donaciones a:hover {
+        background-color: #f1af59;
+        color: black;
+    }
+
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+    background-color: #F7F4EA;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    width: 40%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    .cerrar {
+    color: #444;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    }
+
+    .cerrar:hover {
+    color: #000;
+    }
+
+    button.abrir-donar {
+        background-color: #b65200;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button.abrir-donar:hover {
+        background-color: #f1af59;
+        color: black;
+    }
+
+    .donar button {
+        background-color: #b3ff00;
+        font-weight: bold;
+        padding: 10px 40px;
+    }
+
+    .footer {
+        background-color: #f1af59;
+        padding: 60px 10%;
+        color: white;
+        margin-top: 60px;
+    }
+
+    .footer-contenedor {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .footer-columna {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .footer-columna h2 {
+        color: #b65200;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .footer-form label {
+        font-size: 16px;
+    }
+
+    .footer-form input,
+    .footer-form textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        height: 35px;
+        padding-left: 10px;
+        border-radius: 6px;
+        border: none;
+    }
+
+    .footer-form textarea {
+        height: 80px;
+        padding: 10px;
+    }
+
+    .footer-form button {
+        background-color: #b65200;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .footer-form button:hover {
+        background-color: #f1af59;
+        color: black;
+    }
+
+
+    .footer-mapa {
+        width: 100%;
+        height: 200px;
+        border: 0;
+        border-radius: 10px;
+    }
+
+    .footer-redes {
+        list-style: none;
+        padding: 0;
+        margin-top: 15px;
+        line-height: 2;
+        text-align: center;
+    }
+
+    .footer-redes li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-redes li a:hover {
+        color: #f1af59;
+    }
+
+    .footer-copy {
+        text-align: center;
+        margin-top: 40px;
+        color: white;
+    }
+
+    .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 40px;
+    color: white;
+}
+
+.openbtn {
+    font-size: 28px;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    border: none;
+    margin-left: 15px;
+}
+
+.openbtn:hover {
+    color: #b65200;
+}
+
+
+
+
+@media (max-width: 798px) {
+
+    .bloques-ayuda {
+        flex-direction: column;
+    }
+
+    .bloque {
+        width: 100%;
+    }
+    .footer-contenedor {
+        flex-direction: column;
+    }
+    nav ul li {
+        display: none;
+    }
+
+    nav img {
+        left: 60px;
+    }
+
+    .openbtn {
+        display: block;
+    }
+
+    #mySidebar {
+        display: block;
+    }
+}
+
+@media (min-width: 799px) {
+    .openbtn {
+        display: none;
+    }
+    #mySidebar {
+        display: none;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+}
+
+</style>
+
+<body>
+    <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+    <a href="../index.html">Linktree</a>
+    <a href="../../Tp2/blog.html">Blog</a>
+    <a href="./nosotros/nosotros.html">Nosotros</a>
+    <a href="./menu-projectos.html">Proyectos</a>
+    <a href="./ayudar.html">Queres ayudar?</a>
+    <a href="./home.html">Inicio</a>
+
+    <button class="abrir-donar" style="
+        margin: 20px 30px;
+        padding: 12px 20px;
+        width: 80%;
+        background:#b65200;
+        color:white;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        DONAR
+    </button>
+</div>
+
+<nav>
+    <ul>
+        <button class="openbtn" onclick="openNav()">☰</button>
+
+        <img src="../img/logo-pagina.jpeg" alt="Logo">
+
+        <li><a href="../index.html">Linktree</a></li>
+        <li><a href="../../Tp2/blog.html">Blog</a></li>
+        <li><a href="./nosotros/nosotros.html">Nosotros</a></li>
+        <li><a href="./menu-projectos.html">Proyectos</a></li>
+        <li><a href="./ayudar.html">Queres ayudar?</a></li>
+        <li><a href="./home.html">Inicio</a></li>
+        <li class="donar"><button class="abrir-donar"><b>DONAR</b></button></li>
+    </ul>
+</nav>
+<section class="intro-ayuda">
+    <h1>Cómo Podés Ayudar</h1>
+    <p>Tu colaboración cambia vidas. Existen muchas formas de acompañar nuestro trabajo: desde donar, ser voluntario, apadrinar animales o difundir nuestras campañas. Cada pequeño gesto suma y permite que sigamos rescatando, rehabilitando y encontrando hogares para quienes más lo necesitan.</p>
+</section>
+<section class="bloques-ayuda">
+    <article class="bloque">
+        <img src="../img/voluntariado.jpg" alt="">
+        <h2>Voluntariado</h2>
+        <p>Podés ayudarnos en campañas, traslados, cuidado diario, difusión y eventos especiales.</p>
+        <a href="./nosotros/nosotros.html">Quiero ser voluntario</a>
+    </article>
+    <article class="bloque">
+        <img src="../img/donaciones.jpg" alt="">
+        <h2>Donaciones</h2>
+        <p>Tu aporte permite que compremos medicamentos, alimento, insumos médicos y mantengamos a nuestros rescatados.</p>
+        <button class="abrir-donar"><b>Donar ahora</b></button>
+
+    </article>
+    <article class="bloque">
+        <img src="../img/adopciones-ayuda.jpg" alt="">
+        <h2>Adopciones</h2>
+        <p>Si no podés donar, adoptar también salva vidas. Brindales un hogar seguro y lleno de amor.</p>
+        <a href="./ayudar/verAnimales.html">Ver animales</a>
+    </article>
+
+</section>
+<section class="donaciones">
+    <h2>Formas de Donar</h2>
+    <p>Todo aporte, por más pequeño que sea, nos ayuda a seguir adelante. Gracias a la comunidad podemos cubrir cirugías, tratamientos, comida y rehabilitación de decenas de animales cada mes.</p>
+
+    <ul>
+        <li>✔ Transferencias bancarias</li>
+        <li>✔ Donaciones por mercado pago</li>
+        <li>✔ Donación de alimento balanceado</li>
+        <li>✔ Donación de medicamentos e insumos</li>
+        <li>✔ Aportes mensuales como padrino/madrina</li>
+    </ul>
+    <button class="abrir-donar"><b>Quiero donar</b></button>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-contenedor">
+        <div class="footer-columna">
+            <h2>Contacto</h2>
+
+            <form class="footer-form">
+                <label>Nombre:</label>
+                <input type="text">
+
+                <label>Email:</label>
+                <input type="email">
+
+                <label>Mensaje:</label>
+                <textarea></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="footer-columna">
+            <h2>Información</h2>
+            <p><b>Email:</b> contacto@huellas.org</p>
+            <p><b>Teléfono:</b> +54 11 5555-5555</p>
+            <p><b>Dirección:</b> CABA, Buenos Aires, Argentina</p>
+            <p><b>Horarios:</b> Lunes a Sábado de 9 a 18 hs</p>
+        </div>
+
+        <div class="footer-columna">
+            <h2>Dónde estamos</h2>
+            <iframe 
+                class="footer-mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.947431014709!2d-58.44522!3d-34.58368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM1JzAxLjMiUyA1OMKwMjYnMzIuOCJX!5e0!3m2!1ses!2sar!4v0000000000000"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="footer-columna">
+            <h2>Redes Sociales</h2>
+            <p>Seguinos para ver rescates, adopciones y novedades:</p>
+
+            <ul class="footer-redes">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">TikTok</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <p class="footer-copy">
+        © 2025 Huellas de Esperanza — Todos los derechos reservados
+    </p>
+
+</footer>
+<div id="modalDonar" class="modal">
+    <div class="modal-content">
+        <span class="cerrar">&times;</span>
+
+        <h2 style="color:#b65200; margin-bottom:15px;">Realizar una Donación</h2>
+        <p>Completá tus datos para que podamos contactarte y enviarte los medios de donación.</p>
+
+        <form>
+            <label>Nombre:</label>
+            <input type="text" style="width:100%; height:35px; margin-bottom:10px;">
+
+            <label>Email:</label>
+            <input type="email" style="width:100%; height:35px; margin-bottom:10px;">
+
+            <label>Monto (opcional):</label>
+            <input type="text" style="width:100%; height:35px; margin-bottom:15px;">
+
+            <input type="submit" value="Enviar"
+            style="background-color:#b65200; color:white; padding:10px; border:none; border-radius:8px; width:100%; cursor:pointer;">
+        </form>
+    </div>
+</div>
+
+<script>
+var modal = document.getElementById("modalDonar");
+var botones = document.getElementsByClassName("abrir-donar");
+var cerrar = document.getElementsByClassName("cerrar")[0];
+
+for (var i = 0; i < botones.length; i++) {
+    botones[i].onclick = function() {
+        modal.style.display = "block";
+    }
+}
+
+cerrar.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(e) {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+}
+</script>
+</body>
+</html>

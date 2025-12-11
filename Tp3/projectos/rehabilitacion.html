@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehabilitación</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/x-icon" href="../../img/icono-pagina.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        nav{
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    
+        nav ul{
+            background-color: #A8BBA3;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            height: 50px;
+            gap: 5px;
+            justify-content: end;
+            align-items: center;
+            position: relative;
+
+            }
+            nav a{
+            background-color: antiquewhite;
+            padding: 10px 40px;
+            text-decoration:none;
+            color: black;
+            border-radius: 5px;
+
+            }
+            nav a:hover{
+            background-color: rgb(241, 175, 89);
+
+            }
+            nav img {
+                position: absolute;
+                left: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 45px;
+            }
+
+            main {
+                display: flex;
+                padding-top: 50px;
+            }
+
+            .contenido {
+                width: 70%;
+                background-color: #F7F4EA;
+                padding: 30px;
+            }
+
+            .contenido img {
+                width: 100%;
+                max-height: 100%;
+                margin: 20px 0;
+                border-radius: 15px;
+            }
+
+            .contenido p {
+                text-align: justify;
+                margin-bottom: 15px;
+
+            }
+
+            .contenido h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .contenido .autor {
+                color: #707070;
+                margin-bottom: 10px;
+            }
+            
+
+            aside {
+                background-color: #EBD9D1;
+                width: 30%;
+                padding: 20px;
+            }
+
+            aside div{
+                text-align: center;
+                padding-bottom: 35px;
+            }
+
+            aside h2 {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            aside img {
+                width: 70px;
+            }
+
+            aside p{
+                padding: 30px;
+                text-align: justify;
+            }
+
+            aside ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                padding: 0;
+                margin: 20px 0;
+            }
+
+            .footer {
+                background-color: #f1af59;
+                padding: 60px 10%;
+                color: white;
+                margin-top: 60px;
+            }
+
+            .footer-contenedor {
+                display: flex;
+                gap: 40px;
+                justify-content: center;
+            }
+
+            .footer-columna {
+                flex: 1;
+                min-width: 250px;
+            }
+
+            .footer-columna h2 {
+                color: #b65200;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            .footer-form label {
+                font-size: 16px;
+            }
+
+            .footer-form input,
+            .footer-form textarea {
+                width: 100%;
+                margin-bottom: 10px;
+                height: 35px;
+                padding-left: 10px;
+                border-radius: 6px;
+                border: none;
+            }
+
+            .footer-form textarea {
+                height: 80px;
+                padding: 10px;
+            }
+
+            .footer-form button {
+                background-color: #b65200;
+                color: white;
+                padding: 10px;
+                width: 100%;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            .footer-form button:hover {
+                background-color: #f1af59;
+                color: black;
+            }
+
+
+            .footer-mapa {
+                width: 100%;
+                height: 200px;
+                border: 0;
+                border-radius: 10px;
+            }
+
+            .footer-redes {
+                list-style: none;
+                padding: 0;
+                margin-top: 15px;
+                line-height: 2;
+                text-align: center;
+            }
+
+            .footer-redes li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .footer-redes li a:hover {
+                color: #f1af59;
+            }
+
+            .footer-copy {
+                text-align: center;
+                margin-top: 40px;
+                color: white;
+            }
+            .boton{
+                display:inline-block;
+                margin-top:20px;
+                text-decoration:none;
+                color:white;
+                background-color:#b65200;
+                padding:10px 20px;
+                border-radius:5px;
+            }
+
+            button.abrir-donar {
+                background-color: #b65200;
+                color: white;
+                padding: 12px 25px;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            button.abrir-donar:hover {
+                background-color: #f1af59;
+                color: black;
+            }
+
+            .donar button {
+                background-color: #b3ff00;
+                font-weight: bold;
+                padding: 10px 40px;
+            }
+            
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 300;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding-top: 100px;
+                background-color: rgba(0,0,0,0.4);
+            }
+
+            .modal-content {
+                background-color: #F7F4EA;
+                margin: auto;
+                padding: 25px;
+                border-radius: 15px;
+                width: 40%;
+                max-width: 450px;
+            }
+
+            .cerrar {
+                float: right;
+                font-size: 28px;
+                cursor: pointer;
+                color: #444;
+            }
+
+            .cerrar:hover {
+                color: black;
+            }
+            .sidebar {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 999;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.4s;
+                padding-top: 60px;
+            }
+
+            .sidebar a {
+                padding: 12px 30px;
+                text-decoration: none;
+                font-size: 22px;
+                color: #f1f1f1;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidebar a:hover {
+                background-color: #333;
+            }
+
+            .sidebar .closebtn {
+                position: absolute;
+                top: 15px;
+                right: 25px;
+                font-size: 40px;
+                color: white;
+            }
+
+            .openbtn {
+                font-size: 28px;
+                cursor: pointer;
+                background-color: transparent;
+                color: black;
+                border: none;
+                margin-left: 15px;
+            }
+
+            .openbtn:hover {
+                color: #b65200;
+            }
+
+
+    @media (max-width: 768px) {
+        main {
+            flex-direction: column;
+        }
+
+        .contenido, aside {
+            width: 100%;
+        }
+
+        aside ul {
+            flex-direction: row;
+        }
+        .footer-contenedor {
+            flex-direction: column;
+        }
+        nav ul li {
+        display: none;
+        }
+
+        nav img {
+            left: 60px;
+        }
+
+        .openbtn {
+            display: block;
+        }
+
+        #mySidebar {
+            display: block;
+        }
+    }
+
+    @media (min-width: 799px) {
+        .openbtn {
+            display: none;
+        }
+        #mySidebar {
+            display: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+    }
+        
+    </style>
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+    <a href="../../index.html">Linktree</a>
+    <a href="../../Tp2/blog.html">Blog</a>
+    <a href="../../Tp3/nosotros/nosotros.html">Nosotros</a>
+    <a href="../../Tp3/menu-projectos.html">Proyectos</a>
+    <a href="../ayudar.html">Queres ayudar?</a>
+    <a href="../home.html">Inicio</a>
+
+    <button class="abrir-donar" style="
+        margin: 20px 30px;
+        padding: 12px 20px;
+        width: 80%;
+        background:#b65200;
+        color:white;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+        DONAR
+    </button>
+</div>
+
+<nav>
+    <ul>
+        <button class="openbtn" onclick="openNav()">☰</button>
+
+        <img src="../../img/logo-pagina.jpeg" alt="Logo">
+
+        <li><a href="../../index.html">Linktree</a></li>
+        <li><a href="../../../Tp2/blog.html">Blog</a></li>
+        <li><a href="../nosotros/nosotros.html">Nosotros</a></li>
+        <li><a href="../menu-projectos.html">Proyectos</a></li>
+        <li><a href="../ayudar.html">Queres ayudar?</a></li>
+        <li><a href="../home.html">Inicio</a></li>
+        <li class="donar"><button class="abrir-donar"><b>DONAR</b></button></li>
+    </ul>
+</nav>
+    
+
+    <main>
+        <section class="contenido">
+            <h1>Rehabilitación</h1>
+            <img style="width: 70%;" src="../../img/rehabilitacionarticulo.jpg" alt="Imagen del artículo">
+            <p>Rehabilitar a los animales rescatados es una parte esencial de nuestra misión, porque entendemos 
+                que cada uno de ellos llega con heridas visibles y otras que no pueden verse a simple vista. Algunos 
+                arrastran problemas de salud derivados del abandono, otros sufren desnutrición, infecciones, fracturas 
+                o enfermedades que requieren atención inmediata. Pero muchos también llevan cicatrices emocionales: 
+                miedo, desconfianza, ansiedad o tristeza después de haber vivido situaciones que ningún ser vivo 
+                debería atravesar.</p> 
+                
+            <p>En nuestro proyecto de rehabilitación, trabajamos para devolverles no solo su bienestar físico, 
+                sino también su equilibrio emocional. Sabemos que sanar un cuerpo es importante, pero sanar un 
+                corazón es igual de necesario. Cada tratamiento veterinario, cada baño tibio, cada plato de 
+                comida nutritiva y cada gesto de cariño forma parte de un proceso que transforma sus vidas por 
+                completo. La rehabilitación es el puente que los lleva desde el sufrimiento hasta la esperanza 
+                de un nuevo comienzo.</p>
+
+            <p>Los cuidados que brindamos son fundamentales para que, más adelante, puedan integrarse a una 
+                familia que los ame y los proteja. Sin esta etapa clave, muchos animales no estarían preparados 
+                para confiar otra vez ni para convivir en un entorno seguro. Rehabilitar es, en esencia, prepararlos 
+                para la vida que siempre merecieron.</p>
+
+            <p>Por eso, cuidarlos también es un mensaje para toda la comunidad: cuando elegimos proteger a 
+                quienes no tienen voz, demostramos el tipo de mundo que queremos construir. Cada persona que 
+                decide involucrarse, donar, adoptar o simplemente compartir nuestro mensaje está ayudando a 
+                cambiar una realidad injusta. Los animales no pueden pedir ayuda, pero nosotros sí podemos 
+                ofrecérsela. Y cuando lo hacemos, descubrimos que el acto de cuidar no solo salva vidas… 
+                también transforma la nuestra.</p>
+
+            <a class="boton" href="./rescate.html">Anterior</a>
+            <a class="boton" href="./adopcion.html">Siguiente</a>
+        </section>
+
+        <aside>
+            <div>
+            <h2>¿Por que cuidamos a los rescatados?</h2>
+            <p>Rehabilitamos animales porque entendemos que el rescate es solo el primer 
+                paso para cambiar una vida. Muchos de ellos llegan lastimados, desnutridos 
+                o con secuelas emocionales producto del abandono o el maltrato. La rehabilitación 
+                les permite recuperar su salud física y también su confianza, algo esencial para 
+                que puedan volver a relacionarse con las personas y encontrar una familia definitiva. 
+                Para nosotros, este proceso es fundamental: no se trata solo de salvarlos, sino de 
+                acompañarlos hasta que estén realmente listos para empezar una nueva etapa. Cada animal 
+                rehabilitado representa una historia que se transforma y una oportunidad de demostrar 
+                que el cuidado, la paciencia y el amor pueden devolverles la dignidad que nunca debieron perder.</p>
+            </div>
+            <img style="width: 100%;" src="./img/separadoraside.gif" alt="">
+            <div>
+                 <H2>Nuestras Sedes</H2>
+                <img style="width: 50%;" src="./img/ubicacion.jpg" alt="">
+            </div>
+                <img style="width: 100%;" src="./img/separadoraside.gif" alt="">
+            <div>
+                <h2>Seguinos en las Redes</h2>            
+                <ul>
+                    <li><a href="#"><img src="./img/logo-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="./img/logo-tiktok.png" alt="TikTok"></a></li>
+                    <li><a href="#"><img src="./img/logo_instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+    <footer class="footer">
+
+    <div class="footer-contenedor">
+        <div class="footer-columna">
+            <h2>Contacto</h2>
+
+            <form class="footer-form">
+                <label>Nombre:</label>
+                <input type="text">
+
+                <label>Email:</label>
+                <input type="email">
+
+                <label>Mensaje:</label>
+                <textarea></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="footer-columna">
+            <h2>Información</h2>
+            <p><b>Email:</b> contacto@huellas.org</p>
+            <p><b>Teléfono:</b> +54 11 5555-5555</p>
+            <p><b>Dirección:</b> CABA, Buenos Aires, Argentina</p>
+            <p><b>Horarios:</b> Lunes a Sábado de 9 a 18 hs</p>
+        </div>
+
+        <div class="footer-columna">
+            <h2>Dónde estamos</h2>
+            <iframe 
+                class="footer-mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.947431014709!2d-58.44522!3d-34.58368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM1JzAxLjMiUyA1OMKwMjYnMzIuOCJX!5e0!3m2!1ses!2sar!4v0000000000000"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="footer-columna">
+            <h2>Redes Sociales</h2>
+            <p>Seguinos para ver rescates, adopciones y novedades:</p>
+
+            <ul class="footer-redes">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">TikTok</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <p class="footer-copy">
+        © 2025 Huellas de Esperanza — Todos los derechos reservados
+    </p>
+
+</footer>
+<div id="modalDonar" class="modal">
+    <div class="modal-content">
+        <span class="cerrar">&times;</span>
+
+        <h2 style="color:#b65200; margin-bottom:15px;">Realizar una Donación</h2>
+        <p>Completá tus datos para que podamos contactarte y enviarte los medios de donación.</p>
+
+        <form>
+            <label>Nombre:</label>
+            <input type="text" style="width:100%; height:35px; margin-bottom:10px;">
+
+            <label>Email:</label>
+            <input type="email" style="width:100%; height:35px; margin-bottom:10px;">
+
+            <label>Monto (opcional):</label>
+            <input type="text" style="width:100%; height:35px; margin-bottom:15px;">
+
+            <input type="submit" value="Enviar"
+            style="background-color:#b65200; color:white; padding:10px; border:none; border-radius:8px; width:100%; cursor:pointer;">
+        </form>
+    </div>
+</div>
+
+<script>
+var modal = document.getElementById("modalDonar");
+var botones = document.getElementsByClassName("abrir-donar");
+var cerrar = document.getElementsByClassName("cerrar")[0];
+
+for (var i = 0; i < botones.length; i++) {
+    botones[i].onclick = function() {
+        modal.style.display = "block";
+    }
+}
+
+cerrar.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(e) {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+}
+</script>
+</body>
+</html>
