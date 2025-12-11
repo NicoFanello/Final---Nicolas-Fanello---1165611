@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            background-color: aqua;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        img:nth-child(1){
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        img:nth-child(2){
+            position: absolute;
+            left: 50%;
+            transform:translateX(-50%);
+        }
+        img:nth-child(3){
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        img:nth-child(4){
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform:translateY(-50%);
+        }
+        img:nth-child(5){
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+        }
+        img:nth-child(6){
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform:translateY(-50%);
+        }
+        img:nth-child(7){
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        img:nth-child(8){
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform:translateX(-50%); 
+        }
+        img:nth-child(9){
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        img:hover{
+            width: 350px;
+        }
+        h1:hover{
+            background-color: red;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <div>
+        <img src="img/pinguino.jpg" alt="pinguino" width="250px">
+        <img src="img/pinguino.jpg" alt="pinguino" width="250px">
+        <img src="img/pinguino.jpg" alt="pinguino" width="250px">
+        <img src="img/pinguino.jpg" alt="pinguino" width="250px">
+        <img src="img/pinguino.jpg" alt="pinguino" width="250px">
+        <img src="img/pinguino.jpg" alt="pinguino" width="250px">
+        <img src="img/pinguino.jpg" alt="pinguino" width="250px">
+        <img src="img/pinguino.jpg" alt="pinguino" width="250px">
+        <img src="img/pinguino.jpg" alt="pinguino" width="250px">
+    </div>
+
+</body>
+</html>

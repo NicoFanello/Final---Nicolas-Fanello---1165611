@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        
+        }
+        nav {
+            background-color: aqua;
+            height: 25px;
+        }
+        li {
+            list-style-type: none;
+            display: inline-block;
+            background-color: beige;
+
+        }
+        ul { text-align: center;
+
+        }
+        .container{
+            background-color: cadetblue;
+            text-align: center;
+            
+        }
+
+        aside {
+            background-color: burlywood;
+            display: inline-block;
+            width: 30%;
+            height: 100%;
+        }
+        aside ul li {
+            display: block;
+            background-color: burlywood;
+        }
+        main{
+            background-color: blueviolet;
+            display: inline-block;
+            width: 69%;
+            
+            vertical-align: top;
+        
+        }
+        footer{
+            background-color: lavenderblush;
+            height: 15vh;
+            text-align: center;
+
+        }
+
+        .columna{
+            display: inline-block;
+            border: 2px solid black; 
+            width: 25vw;
+            text-align: center;
+            height: 100%;
+            vertical-align: top;
+        }
+        #columna3 li {
+            display: inline-block;
+            text-align: center;
+            background-color: lavenderblush;
+        }
+
+        .container aside ul li p{
+            background-color: rgb(247, 235, 211);
+            border-radius: 15px;
+            text-align: center;
+            display: inline-block;
+            width: 80%;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+    <ul>
+        
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="mi-bibliografia.html">Bibliografia</a></li>
+        <li><a href="Juego/juego.html">Juego</a></li>
+        <li><a href="playlist.html">Playlist</a></li>
+    </ul>
+</nav>
+    <div class="container">
+        <aside>
+          <ul>
+            <li><p>Demons - Imagine Dragons</p></li>
+            <li><audio controls>
+                <source src="musica/Demons.mp3" type="audio/mpeg">
+                Tu navegador no soporta el audio.
+            </audio></li>
+
+            <li><p>Alienated - Zayn</p></li>
+            <li><audio controls>
+                <source src="musica/Alienated.mp3" type="audio/mpeg">
+                Tu navegador no soporta el audio.
+            </audio></li>
+
+            <li><p>Wrecked - Imagine Dragons</p></li>
+            <li><audio controls>
+                <source src="musica/Wrecked.mp3" type="audio/mpeg">
+                Tu navegador no soporta el audio.
+            </audio></li>
+
+            <li><p>The Emptiness Machine - Linkin Park</p></li>
+            <li><audio controls>
+                <source src="musica/The_Emptiness_Machine.mp3" type="audio/mpeg">
+                Tu navegador no soporta el audio.
+            </audio></li>
+        </ul>
+
+        </aside>
+        <main>
+            <iframe width="600" height="400"  
+            src="https://www.youtube.com/watch?v=mWRsgZuwf_8&list=RDmWRsgZuwf_8&start_radio=1" 
+            title="YouTube video"
+            frameborder="2" allowfullscreen></iframe>
+
+            <h3>Mi Cancion Favorita</h3>
+            <p style="white-space: pre-line;"><b>Demons - Imagine Dragons</b><br></p>
+            <h4 style="text-align: center; border-radius: 15px; background-color: #ec90f5;">
+                la canción habla de luchar con los propios demonios internos: inseguridades, <br>
+                miedos, traumas o pensamientos oscuros que todos cargamos.<br>
+                A diferencia de otras canciones que suelen hablar de esperanza hacia afuera, <br>
+                Demons es muy personal y directa: reconoce que incluso cuando uno quiere ser bueno,<br>
+                hay partes de sí mismo difíciles de mostrar.<br>
+                El estribillo (“cuando te dejo entrar a mi corazón, verás mis demonios”) <br>
+                refleja la vulnerabilidad de mostrarse tal cual uno es.</h4>
+        </main>
+    </div>
+    <footer>
+        <div id="columna1" class="columna"><h3>Nombre</h3></div>
+        <div id="columna2" class="columna"><h3>Mapa del Sitio</h3>
+            <ul>
+                <li><a href=""><img src="" alt="Icono"></a></li>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Bibliografia</a></li>
+                <li><a href="">Juego</a></li>
+                <li><a href="">Playlist </a></li>
+            </ul>
+        </div>
+        <div id="columna3" class="columna">
+        <h3>
+            <ul>
+                <li><a href=""><img style="width: 30px; height: 30px;" src="logos/logo_instagram.png" alt="Logo de Red"></a></li>
+                <li><a href=""><img style="width: 30px; height: 30px;" src="logos/logo-facebook.png" alt="Logo de Red"></a></li>
+                <li><a href=""><img style="width: 30px; height: 30px;" src="logos/logo-tiktok.png" alt="Logo de Red"></a></li>
+            </ul>
+        </h3></div>
+    </footer>
+    
+</body>
+</html>
