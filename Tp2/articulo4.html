@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jirafas - Blog</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    
+    nav ul{
+        background-color: #A8BBA3;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        height: 50px;
+        gap: 5px;
+        justify-content: end;
+        align-items: center;
+        position: relative;
+
+    }
+    nav a{
+        background-color: antiquewhite;
+        padding: 10px 40px;
+        text-decoration:none;
+        color: black;
+        border-radius: 5px;
+
+    }
+    nav a:hover{
+        background-color: rgb(241, 175, 89);
+
+    }
+    nav img {
+            position: absolute;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 45px;
+        }
+
+        main {
+            display: flex;
+            padding-top: 50px;
+        }
+
+        .contenido {
+            width: 70%;
+            background-color: #F7F4EA;
+            padding: 30px;
+        }
+
+        .contenido img {
+            width: 100%;
+            max-height: 100%;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+
+        .contenido p {
+            text-align: justify;
+            margin-bottom: 15px;
+
+        }
+
+        .contenido h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contenido .autor {
+            color: #707070;
+            margin-bottom: 10px;
+        }
+        
+
+        aside {
+            background-color: #EBD9D1;
+            width: 30%;
+            padding: 20px;
+        }
+
+        aside div{
+            text-align: center;
+            padding-bottom: 35px;
+        }
+
+        aside h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        aside img {
+            width: 70px;
+        }
+
+        aside p{
+            padding: 30px;
+            text-align: justify;
+        }
+
+        aside ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #B87C4C;
+            height: 130px;
+            text-align: center;
+            color: white;
+            padding-top: 10px;
+        }
+
+        footer h3 {
+            color: aliceblue;
+            background-color: #b65200;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .boton{
+            display:inline-block;
+            margin-top:20px;
+            text-decoration:none;
+            color:white;
+            background-color:#b65200;
+            padding:10px 20px;
+            border-radius:5px;
+
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            .contenido, aside {
+                width: 100%;
+            }
+
+            aside ul {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <img src="../img/logo-pagina.jpeg" alt="Logo">
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="../index.html">Linktree</a></li>
+            <li><a href="./ecommerce">Tienda</a></li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <section class="contenido">
+            <h1>Desde las alturas: la vida tranquila de las jirafas</h1>
+            <p class="autor">Publicado por <a href="#">Nicolas Fanello</a> en Octubre</p>
+            <img src="../img/jirafaarticulo.jpg" alt="Imagen del artículo">
+            <p>En el horizonte dorado de la sabana africana, una figura alta y serena se recorta contra el cielo. 
+                Es la jirafa, el animal terrestre más alto del planeta y una de las criaturas más elegantes de la naturaleza. 
+                Con su largo cuello y su mirada pacífica, parece observar el mundo desde otra perspectiva, una donde la calma y 
+                la paciencia son parte del paisaje.</p> 
+            <p>Las jirafas viven en grupos tranquilos que recorren largas distancias 
+                en busca de alimento. Su altura les permite alcanzar las hojas más tiernas de las acacias, y sus lenguas, 
+                largas y flexibles, las ayudan a alimentarse sin lastimarse con las espinas. Cada una tiene un patrón de manchas 
+                irrepetible, como si la naturaleza las hubiera pintado a mano, haciendo de cada jirafa una obra de arte única.</p> 
+            
+            <p>A pesar de su apariencia delicada, las jirafas son fuertes y resistentes. Sus patas poderosas pueden derribar a un 
+                depredador con una sola patada, y su corazón —el más grande entre los animales terrestres— late con una fuerza capaz 
+                de bombear sangre hasta su cabeza a más de dos metros de altura. Esa misma fuerza las mantiene firmes frente a los desafíos 
+                de un entorno cambiante.</p> 
+                
+            <p>Hoy, sin embargo, su supervivencia también corre peligro. La pérdida de hábitat y la caza ilegal han reducido sus 
+                poblaciones. Protegerlas es conservar la belleza y la tranquilidad que representan, un recordatorio de que incluso 
+                en el mundo salvaje, la gracia y la paz pueden ser una forma de fortaleza.</p>
+
+
+            <a class="boton" href="./articulo3.html">Anterior</a>
+            <a class="boton" href="./articulo5.html">Siguiente</a>
+        </section>
+
+        <aside>
+            <div>
+            <h2>¿Por que Jirafas?</h2>
+            <p>Elegí escribir sobre las jirafas porque representan la calma, la elegancia y 
+                la mirada elevada hacia la vida. Me inspiran por su manera serena de habitar 
+                el mundo, su fuerza silenciosa y su equilibrio entre delicadeza y poder. A través 
+                de ellas, encuentro una invitación a observar con más altura, sin perder la 
+                sensibilidad ni la armonía con la naturaleza.</p>
+            </div>
+            <img style="width: 100%;" src="../img/separadoraside.gif" alt="">
+            <div>
+                 <H2>Aprende sobre Ellos</H2>
+                <iframe width="100%" height="400"  
+                src="https://www.youtube.com/watch?v=gikPDrdR4pU" 
+                title="YouTube video"
+                frameborder="2" allowfullscreen></iframe>
+                </audio>
+                </div>
+                <img style="width: 100%;" src="../img/separadoraside.gif" alt="">
+                <div>
+                <h2>Jirafa</h2>
+                <audio controls>
+                    <source src="../sonido/jirafa.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el audio.
+                </audio>
+            </div>
+            <img style="width: 100%;" src="../img/separadoraside.gif" alt="">
+            <div>
+                <h2>Seguinos en las Redes</h2>            
+                <ul>
+                    <li><a href="#"><img src="../img/logo-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="../img/logo-tiktok.png" alt="TikTok"></a></li>
+                    <li><a href="#"><img src="../img/logo_instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <h3>Mapa del Sitio</h3>
+        <ul>
+            <li><a href="./blog.html">Inicio</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">Sobre Nosotros</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

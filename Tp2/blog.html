@@ -1,0 +1,450 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    
+    nav ul{
+        background-color: #A8BBA3;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        height: 50px;
+        gap: 5px;
+        justify-content: end;
+        align-items: center;
+        position: relative;
+
+    }
+    nav a{
+        background-color: antiquewhite;
+        padding: 10px 40px;
+        text-decoration:none;
+        color: black;
+        border-radius: 5px;
+
+    }
+    nav a:hover{
+        background-color: #f1af59;
+
+    }
+    nav img {
+            position: absolute;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 45px;
+        }
+
+    main{
+        display: flex;
+        /* padding-top: 50px; */
+    }
+    main ul{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+    }
+    .feed{
+        width: 70%;
+        background-color: #F7F4EA;
+        padding-left: 30px;
+    }
+    article img{
+        border-radius: 15px;
+        height: 300px;
+    }
+
+    article ul {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    article a {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+
+    article p {
+        padding-bottom: 10px;
+    }
+
+    article h2 {
+        padding-bottom: 10px;
+    }
+    
+    h1{
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    div p{
+        text-align: justify;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    div img{
+        float: right;
+        height: 70px;
+        width: 70px;
+        border-radius: 45px;
+        margin: 10px 10px 10px 10px;
+    }
+    .mas{
+            display:inline-block;
+            margin-top:20px;
+            text-decoration:none;
+            color:white;
+            background-color:#b65200;
+            padding:10px 20px;
+            border-radius:5px;
+
+        }
+    
+    aside{
+        background-color: #EBD9D1;
+        width: 30%;
+    }
+
+        aside div{
+            padding: 20px;
+        }
+
+        aside div h1{
+            padding: 20px;
+            padding-bottom: 20px;
+        }
+
+        aside img {
+            width: 60px;
+            max-width: 100%;
+            height: 60px;
+        }
+
+
+        aside ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        aside ul li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+        form label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+
+    footer {
+            background-color: #B87C4C;
+            height: 130px;
+            text-align: center;
+            color: white;
+            padding-top: 10px;
+        }
+
+        footer h3 {
+            color: aliceblue;
+            background-color: #b65200;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    
+    .titulo{
+        text-align: center;
+        padding-top: 115px;
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 2px;
+    }     
+
+    h4{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    hr{
+        margin-top: 20px;
+    }
+
+    input{
+        height:30px;
+    }
+
+
+
+
+    
+    @media (max-width: 768px) {
+        
+        main{
+            flex-direction: column;
+        }
+        .feed{
+            width: 100%;
+            text-align: center;
+        }
+        .tablaanimal{
+            text-align: justify;
+        }
+        .tablaanimal picture{
+            padding-left: 60px;
+            text-align: center;
+        }
+
+        picture{
+            text-align: center;
+        }
+        aside{
+            width: 100%;
+        }
+        .mas{
+            display: block;
+            margin-right: 30px;
+            text-align: center;
+
+        }
+        
+      
+
+    }
+    @media (max-width: 1200px) {
+        .tablaanimal{
+            flex-direction: column;
+        }
+        h4{
+            padding-left: 0px;
+            padding-top: 15px;
+        }
+
+    }
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <img src="../img/logo-pagina.jpeg" alt="Logo">
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="../index.html">Linktree</a></li>
+            <li><a href="./ecommerce">Tienda</a></li>
+        </ul>
+    </nav>
+    <div style="background-image: url(../img/bannersaavana.jpg);height: 270px;">
+        <h1 class="titulo">BIENVENIDO AL MUNDO ANIMAL</h1>
+    </div>
+    <main>
+        <section class="feed">
+        <article>
+            <ul>
+                <li><a href="./articulo2.html">Animales,</a></li>
+                <li><a href="./articulo2.html">Salvajes,</a></li>
+                <li><a href="./articulo2.html">Sabana</a></li>
+            </ul>
+            <h2>El Rey de la Selva</h2>
+            <p>Publicado por <a href="">Nicolas Fanello</a> en Octubre</p>
+            <ul class="tablaanimal">
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="../img/leon.jpg">
+                        <img src="../img/leonChico.jpg">
+                    </picture>
+                </li>
+                <li><h4>¿Alguna vez te preguntaste por qué el león es llamado el rey de la selva?
+                        En mi nuevo artículo te invito a conocer su verdadera historia: cómo cazan 
+                        en equipo, cómo protegen a su manada y qué los hace uno de los animales más 
+                        fascinantes del planeta. Descubrí el poder, la elegancia y los secretos de 
+                        este símbolo de fuerza y liderazgo en el corazón de la sabana. ¡Entrá y 
+                        conocé al verdadero guardián del reino animal!</h4></li>
+            </ul>
+            
+            <a class="mas" href="./articulo2.html">Leer Mas</a>
+            <hr>
+        </article>
+        <article>
+            <ul>
+                <li><a href="./articulo1.html">Animales,</a></li>
+                <li><a href="./articulo1.html">Salvajes,</a></li>
+                <li><a href="./articulo1.html">Antartida</a></li>
+            </ul>
+            <h2>El Guardian de la Antártida</h2>
+            <p>Publicado por <a href="">Nicolas Fanello</a> en Octubre</p>
+            <ul class="tablaanimal">
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="../img/pinguino.jpg">
+                        <img src="../img/pinguinoChico.jpg">
+                    </picture>
+                </li>
+                <li><h4>¿Creías que los pingüinos eran solo aves torpes que viven en el frío?
+                        En mi nuevo artículo vas a descubrir el lado más increíble de estos 
+                        animales: su vida en comunidad, sus travesías sobre el hielo y las 
+                        historias de amor que los mantienen unidos incluso en las peores tormentas. 
+                        Explorá cómo sobreviven en uno de los lugares más extremos del planeta y 
+                        por qué, pese al frío, los pingüinos son puro corazón. ¡Entrá y dejate 
+                        sorprender por los verdaderos guardianes del hielo!</h4></li>
+            </ul>
+            <a class="mas" href="./articulo1.html">Leer Mas</a>
+            <hr>
+        </article>
+        <article>
+            <ul>
+                <li><a href="./articulo3.html">Animales,</a></li>
+                <li><a href="./articulo3.html">Salvajes,</a></li>
+                <li><a href="./articulo3.html">Sabana</a></li>
+            </ul>
+            <h2>Gigantes con memoria: el corazón sabio de la sabana</h2>
+            <p>Publicado por <a href="">Nicolas Fanello</a> en Octubre</p>
+            <ul class="tablaanimal">
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="../img/elefante.jpg">
+                        <img src="../img/elefantechico.jpg">
+                    </picture>
+                </li>
+                <li><h4>¿Sabías que los elefantes tienen una memoria capaz de cambiar la historia de su manada?
+                        En mi nuevo artículo vas a descubrir el lado más asombroso de estos gigantes: su inteligencia, 
+                        su sensibilidad y los lazos familiares que los mantienen unidos a lo largo de toda su vida. 
+                        Explorá cómo recuerdan los caminos del agua, cómo expresan emociones como la alegría o el duelo, 
+                        y por qué son considerados los sabios del reino animal. ¡Entrá y conocé a los verdaderos 
+                        guardianes de la memoria!</h4></li>
+            </ul>
+            <a class="mas" href="./articulo3.html">Leer Mas</a>
+            <hr>
+        </article>
+        <article>
+            <ul>
+                <li><a href="./articulo4.html">Animales,</a></li>
+                <li><a href="./articulo4.html">Salvajes,</a></li>
+                <li><a href="./articulo4.html">Sabana</a></li>
+            </ul>
+            <h2>Desde las alturas: la vida tranquila de las jirafas</h2>
+            <p>Publicado por <a href="">Nicolas Fanello</a> en Octubre</p>
+            <ul class="tablaanimal">
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="../img/jirafa.jpg">
+                        <img src="../img/jirafachico.jpg">
+                    </picture>
+                </li>
+                <li><h4>¿Pensabas que las jirafas solo eran animales altos y tranquilos?
+                        En mi nuevo artículo vas a descubrir el lado más sorprendente de estas criaturas elegantes: 
+                        cómo su altura les da una visión única del mundo, cómo viven en armonía con su entorno y de qué 
+                        manera su fuerza silenciosa las convierte en símbolos de equilibrio y paz. Explorá su vida entre 
+                        las acacias, sus vínculos dentro del grupo y los secretos que esconden detrás de su mirada serena. 
+                        ¡Entrá y conocé a las verdaderas guardianas de las alturas!</h4>
+                </li>
+            </ul>
+            <a class="mas" href="./articulo5.html">Leer Mas</a>
+            <hr>
+        </article>
+        <article>
+            <ul>
+                <li><a href="./articulo5.html">Animales,</a></li>
+                <li><a href="./articulo5.html">Domesticos,</a></li>
+                <li><a href="./articulo5.html">Hogarenos</a></li>
+            </ul>
+            <h2>Más que amigos: la lealtad infinita de los perros</h2>
+            <p>Publicado por <a href="">Nicolas Fanello</a> en Octubre</p>
+            <ul class="tablaanimal">
+                <li>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="../img/perro.jpg">
+                        <img src="../img/perrochico.jpg">
+                    </picture>
+                </li>
+                <li><h4>¿Pensabas que los perros solo eran nuestras mascotas más fieles?
+                        En mi nuevo artículo vas a descubrir el increíble mundo detrás de su mirada: cómo sienten, cómo se 
+                        comunican y por qué su vínculo con los humanos es uno de los más antiguos y profundos del planeta. 
+                        Explorá su historia, su lealtad y la forma en que logran llenar de alegría hasta los días más grises. 
+                        ¡Entrá y conocé a los verdaderos compañeros del alma!</h4>
+                </li>
+            </ul>
+            <a class="mas" href="./articulo5.html">Leer Mas</a>
+            <hr>
+        </article>
+
+        
+        </section>
+        <aside>
+            <div>
+                <h1>COMO EMPEZO TODO</h1>
+                <img src="../img/duenoconperro.jpg" alt="">
+                <p>Siempre me fascinó el mundo animal. Cada especie tiene una historia única,
+                     una forma de adaptarse y sobrevivir que muchas veces pasa desapercibida.
+                    Decidí crear este blog para compartir esa admiración por los animales salvajes,
+                    descubrir sus secretos y mostrar lo asombroso que puede ser el planeta si lo
+                    observamos con curiosidad. Mi objetivo es que cada artículo despierte respeto
+                     y amor por la naturaleza, y que juntos aprendamos a protegerla.</p>
+
+            </div>
+            <img style="width: 100%;" src="../img/separadoraside.gif" alt="">
+            <div>
+            <h1>Nuestras Redes</h1>
+            <ul>
+                <li><a href=""><img src="../img/logo-facebook.png" alt=""></a></li>
+                <li><a href=""><img src="../img/logo-tiktok.png" alt=""></a></li>
+                <li><a href=""><img src="../img/logo_instagram.png" alt=""></a></li>
+            </ul>
+            </div>
+            <img style="width: 100%;" src="../img/separadoraside.gif" alt="">
+            <div>
+            <h1>Suscribete para mas diversion!</h1>
+            <form action="">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="Nombre">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                <input type="submit">
+            </form>
+            </div>
+
+        </aside>
+    </main>
+    <footer>
+        <h3>Mapa del Sitio</h3>
+        <ul>
+            <li><a href="./blog.html">Inicio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

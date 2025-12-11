@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perros - Blog</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    
+    nav ul{
+        background-color: #A8BBA3;
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        height: 50px;
+        gap: 5px;
+        justify-content: end;
+        align-items: center;
+        position: relative;
+
+    }
+    nav a{
+        background-color: antiquewhite;
+        padding: 10px 40px;
+        text-decoration:none;
+        color: black;
+        border-radius: 5px;
+
+    }
+    nav a:hover{
+        background-color: rgb(241, 175, 89);
+
+    }
+    nav img {
+            position: absolute;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 45px;
+        }
+
+        main {
+            display: flex;
+            padding-top: 50px;
+        }
+
+        .contenido {
+            width: 70%;
+            background-color: #F7F4EA;
+            padding: 30px;
+        }
+
+        .contenido img {
+            width: 100%;
+            max-height: 100%;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+
+        .contenido p {
+            text-align: justify;
+            margin-bottom: 15px;
+
+        }
+
+        .contenido h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contenido .autor {
+            color: #707070;
+            margin-bottom: 10px;
+        }
+        
+
+        aside {
+            background-color: #EBD9D1;
+            width: 30%;
+            padding: 20px;
+        }
+
+        aside div{
+            text-align: center;
+            padding-bottom: 35px;
+        }
+
+        aside h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        aside img {
+            width: 70px;
+        }
+
+        aside p{
+            padding: 30px;
+            text-align: justify;
+        }
+
+        aside ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #B87C4C;
+            height: 130px;
+            text-align: center;
+            color: white;
+            padding-top: 10px;
+        }
+
+        footer h3 {
+            color: aliceblue;
+            background-color: #b65200;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .boton{
+            display:inline-block;
+            margin-top:20px;
+            text-decoration:none;
+            color:white;
+            background-color:#b65200;
+            padding:10px 20px;
+            border-radius:5px;
+
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            .contenido, aside {
+                width: 100%;
+            }
+
+            aside ul {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <img src="../img/logo-pagina.jpeg" alt="Logo">
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="../index.html">Linktree</a></li>
+            <li><a href="./ecommerce">Tienda</a></li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <section class="contenido">
+            <h1>Más que amigos: la lealtad infinita de los perros</h1>
+            <p class="autor">Publicado por <a href="#">Nicolas Fanello</a> en Octubre</p>
+            <img src="../img/perroarticulo.jpg" alt="Imagen del artículo">
+            <p>En cada rincón del mundo, hay una historia que empieza con un ladrido y termina con una amistad inquebrantable. 
+                Los perros, considerados los mejores amigos del ser humano, llevan miles de años compartiendo nuestra vida, 
+                nuestros hogares y nuestros sentimientos. Son protectores, compañeros, guías y, sobre todo, seres capaces de 
+                brindar amor sin pedir nada a cambio.</p> 
+                
+            <p>Su historia comenzó hace más de 15.000 años, cuando los lobos se acercaron por primera vez a los 
+                asentamientos humanos. Con el tiempo, esa convivencia se transformó en una alianza única: los humanos 
+                ofrecieron refugio y alimento, y los perros respondieron con lealtad, compañía y una capacidad asombrosa 
+                para entendernos incluso sin palabras. Hoy, siguen siendo parte esencial de nuestra vida cotidiana, 
+                adaptándose a nuestras emociones y rutinas con una sensibilidad que pocas especies poseen.</p> 
+                
+            <p>Los perros no solo acompañan, también ayudan. Muchos trabajan como guías para personas con discapacidad 
+                visual, otros asisten en rescates, terapias o misiones de búsqueda. Su instinto protector y su 
+                inteligencia emocional los convierten en un ejemplo de empatía pura. Dicen que un perro no necesita 
+                hablar para decirlo todo: basta una mirada, una cola que se mueve o un pequeño salto de alegría al 
+                verte volver a casa.</p> 
+            
+            <p>Sin embargo, también necesitan de nosotros. El abandono y el maltrato siguen siendo problemas graves
+                 en todo el mundo. Cuidarlos, adoptarlos y respetarlos es una forma de devolverles la fidelidad que siempre nos 
+                 han dado. En su compañía, los humanos descubrimos una verdad sencilla pero poderosa: no hay amor más sincero 
+                 que el de un perro que confía en vos.</p>
+
+
+            <a class="boton" href="./articulo4.html">Anterior</a>
+            <a class="boton" href="./blog.html">Volver al Inicio</a>
+        </section>
+
+        <aside>
+            <div>
+            <h2>¿Por que Perros?</h2>
+            <p>Elegí escribir sobre los perros porque representan el amor incondicional, la lealtad y la conexión 
+                más pura entre el ser humano y la naturaleza. Me inspiran por su capacidad de acompañar sin juzgar, 
+                de alegrar cualquier día con su presencia y de recordarnos que la verdadera felicidad se encuentra en 
+                los gestos simples. A través de ellos, entendí que cuidar a quienes nos aman es una de las formas más 
+                nobles de ser humanos.</p>
+            </div>
+            <img style="width: 100%;" src="../img/separadoraside.gif" alt="">
+            <div>
+                 <H2>Aprende sobre Ellos</H2>
+                <iframe width="100%" height="400"  
+                src="https://www.youtube.com/watch?v=G6R21SqSW9s" 
+                title="YouTube video"
+                frameborder="2" allowfullscreen></iframe>
+                </audio>
+                </div>
+                <img style="width: 100%;" src="../img/separadoraside.gif" alt="">
+                <div>
+                <h2>Perro</h2>
+                <audio controls>
+                    <source src="../sonido/perro.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el audio.
+                </audio>
+            </div>
+            <img style="width: 100%;" src="../img/separadoraside.gif" alt="">
+            <div>
+                <h2>Nuestras Redes</h2>            
+                <ul>
+                    <li><a href="#"><img src="../img/logo-facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="../img/logo-tiktok.png" alt="TikTok"></a></li>
+                    <li><a href="#"><img src="../img/logo_instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <h3>Mapa del Sitio</h3>
+        <ul>
+            <li><a href="./blog.html">Inicio</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">Sobre Nosotros</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
